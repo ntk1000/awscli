@@ -1,2 +1,2 @@
 # awscli
-awscli for docker
+awscli docker image
