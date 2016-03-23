@@ -1,0 +1,10 @@
+deploy:
+  box: ruby
+  steps:
+    - internal/docker-push:
+      username: $USERNAME
+      password: $PASSWORD
+      repository: ntk1000/awscli
+  afte -steps:
+    - wantedly/pretty-slack-notify:
+      webhook_url: $SLACK_WEBHOOK_URL
