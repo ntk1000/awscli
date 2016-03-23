@@ -1,19 +1,19 @@
 build:
-  box:
-    id: gliderlabs/alpine
-    cmd: /bin/sh
-  steps:
-    - script:
-      name: echo echo
-      code: |
-        echo echo
-deploy:
+        #   box:
+        #     id: gliderlabs/alpine
+        #     cmd: /bin/sh
+        #   steps:
+        #     - script:
+        #       name: echo echo
+        #       code: |
+        #         echo echo
+        # deploy:
   box: ruby
   steps:
     - internal/docker-push:
       username: $USERNAME
       password: $PASSWORD
       repository: ntk1000/awscli
-  afte -steps:
+  after-steps:
     - wantedly/pretty-slack-notify:
       webhook_url: $SLACK_WEBHOOK_URL
