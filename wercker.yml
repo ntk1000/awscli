@@ -9,7 +9,7 @@ build:
         #         echo echo
         # deploy:
   box: ruby
-  steps:
+  dockerhub:
     - internal/docker-push:
       username: $USERNAME
       password: $PASSWORD
