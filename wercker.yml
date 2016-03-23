@@ -1,4 +1,12 @@
 build:
+  box:
+    id: gliderlabs/alpine
+    cmd: /bin/sh
+  steps:
+    - script:
+      name: echo echo
+      code: |
+        echo echo
 deploy:
   box: ruby
   steps:
